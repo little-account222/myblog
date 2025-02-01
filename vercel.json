@@ -9,7 +9,7 @@
     "crons": [
       {
         "path": "/trigger",
-        "schedule": "* * 5 * *"
+        "schedule": "* * * 5 *"
       }
     ]
   }
