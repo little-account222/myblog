@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "api/index.py", "use": "@vercel/python" }
+    ],
+    "routes": [
+      { "src": "/trigger", "dest": "/api/index.py" }
+    ],
+    "crons": [
+      {
+        "path": "/trigger",
+        "schedule": "*/5 * * * *"
+      }
+    ]
+  }
+  
