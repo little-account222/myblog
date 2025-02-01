@@ -30,9 +30,9 @@ def run_ocr_job():
 def trigger():
     return jsonify(run_ocr_job())
 
-# Required for Vercel
-def handler(event, context):
-    return app(event, context)
+# Required for Vercel Deployment
+def handler(request):
+    return app(request, None)
 
 if __name__ == "__main__":
     app.run(debug=True)
